@@ -24,6 +24,20 @@ function hideSubMenu(el){
     el.classList.remove('show-submenu');
 }
 
+$(window).ready(function(){
+    let wHeight =$(window).height();
+
+    $('.header_row')
+    .height(wHeight)
+    .scollie({
+        scrollOffset:-50,
+        scrollingInView:function(elem){
+            let bgColor = elem.data('background');
+
+            $('header_row').css('background-color',black);
+        }
+    });
+});
 // "use strict";
 
 // let c = 45;
